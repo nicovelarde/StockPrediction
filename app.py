@@ -8,7 +8,7 @@ from keras.models import load_model
 import streamlit as st
 
 start = '2010-12-31'
-end = '2023-01-01'
+end = '2023-06-30'
 
 st.title('Stock Trend Prediction')
 
@@ -16,7 +16,7 @@ user_input = st.text_input('Enter Stock Ticker','AAPL')
 df = yf.download(user_input, end=end,start=start)
 
 #Describing Data
-st.subheader('Data from 2010 - 2019')
+st.subheader('Data from December 2010 - July 2023')
 st.write(df.describe())
 
 #Visualizations
